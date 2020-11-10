@@ -1,6 +1,7 @@
 from typing import Any, Mapping
 from .algorithm_invoker import AlgorithmInvoker
-from search import LinearSearch, BinarySearch
+from algocollection.search import LinearSearch, BinarySearch
+
 
 class AlgorithmClient(object):
     """The CLIENT class"""

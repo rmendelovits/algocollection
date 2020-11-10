@@ -1,5 +1,6 @@
 from typing import Any, Mapping
 
+
 class AlgorithmInvoker(object):
     """The INVOKER class"""
     def __init__(self) -> None:

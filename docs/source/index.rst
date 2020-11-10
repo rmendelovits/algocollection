@@ -11,6 +11,7 @@ Welcome to algocollection's documentation!
    :caption: Contents:
 
    readme
+   modules
 
 Indices and tables
 ==================

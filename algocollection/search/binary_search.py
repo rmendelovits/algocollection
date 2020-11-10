@@ -1,7 +1,26 @@
 from typing import Any, Mapping
-from common import Algorithm
+from algocollection.common import Algorithm
+
 
 class BinarySearch(Algorithm):
+    """An implimentation of the binary search algorithm.
+    Methods
+    -------
+    execute(self, param_dict: Mapping[str, Any]) -> Any:
+        first, unpacks param_dict into array and key
+        Search the sorted array for a key
+            If the key is found, return the index in the array
+                (from 0 to len(array) - 1)
+            Otherwise return None
+    Notes
+    -----
+    Time Complexity:
+        Let n = len(array)
+        T(n) = O(log_2(n))
+    One reason to use abstract base class for all types of binary trees
+    is to make sure the type of binary trees is compatable. Therefore, binary
+    tree traversal can be performed on any type of binary trees.
+    """
     """Search the sorted array for a key
         If the key is found, return the index in the array
             (from 0 to len(array) - 1)
@@ -17,10 +36,9 @@ class BinarySearch(Algorithm):
     """
     def execute(self, param_dict: Mapping[str, Any]) -> Any:
         # unpack the param_dict
-        if (not 'array' in param_dict
-            or not 'key' in param_dict):
+        if ('array' not in param_dict or 'key' not in param_dict):
             raise ValueError("LinearSearch requires an array"
-            " and a key to execute")
+                             " and a key to execute")
         array = param_dict['array']
         key = param_dict['key']
 
