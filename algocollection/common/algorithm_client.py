@@ -2,6 +2,8 @@ from typing import Any, Mapping
 from .algorithm_invoker import AlgorithmInvoker
 from algocollection.search import LinearSearch, BinarySearch
 from algocollection.sort import BubbleSort, InsertionSort, MergeSort, QuickSort, SelectionSort
+from algocollection.maths import Gcd, ExtendedGcd
+from algocollection.graphs import BreadthFirstSearch, DepthFirstSearch
 
 
 class AlgorithmClient(object):
@@ -23,13 +25,19 @@ class AlgorithmClient(object):
             return self._algorithm_invoker.execute(InsertionSort, param_dict)
         elif cmd == "selection_sort":
             return self._algorithm_invoker.execute(SelectionSort, param_dict)
-        elif cmd == "insertion_sort":
-            return self._algorithm_invoker.execute(InsertionSort, param_dict)
+        elif cmd == "merge_sort":
+            return self._algorithm_invoker.execute(MergeSort, param_dict)
         elif cmd == "bubble_sort":
-            return self._algorithm_invoker.execute(SelectionSort, param_dict)
+            return self._algorithm_invoker.execute(BubbleSort, param_dict)
         elif cmd == "quick_sort":
-            return self._algorithm_invoker.execute(InsertionSort, param_dict)
-        elif cmd == "gcdt":
-            return self._algorithm_invoker.execute(SelectionSort, param_dict)
+            return self._algorithm_invoker.execute(QuickSort, param_dict)
+        elif cmd == "gcd":
+            return self._algorithm_invoker.execute(Gcd, param_dict)
+        elif cmd == "extended_gcd":
+            return self._algorithm_invoker.execute(ExtendedGcd, param_dict)
+        elif cmd == "breadth_first_search":
+            return self._algorithm_invoker.execute(BreadthFirstSearch, param_dict)
+        elif cmd == "depth_first_search":
+            return self._algorithm_invoker.execute(DepthFirstSearch, param_dict)
         else:
             raise ValueError("Could not find algorithm")

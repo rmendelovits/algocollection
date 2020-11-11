@@ -1,6 +1,6 @@
 [metadata]
 name = 'algocollection'
-version = '0.0.3'
+version = '0.0.4'
 description = 'An algorithm collection'
 author = 'Raymond Mendelovits'
 author_email = 'raymondmendelovits@gmail.com'
