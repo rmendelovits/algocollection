@@ -1,7 +1,7 @@
 from typing import Any, Mapping
 from .algorithm_invoker import AlgorithmInvoker
 from algocollection.search import LinearSearch, BinarySearch
-from algocollection.sort import InsertionSort, SelectionSort
+from algocollection.sort import BubbleSort, InsertionSort, MergeSort, QuickSort, SelectionSort
 
 
 class AlgorithmClient(object):
@@ -22,6 +22,14 @@ class AlgorithmClient(object):
         elif cmd == "insertion_sort":
             return self._algorithm_invoker.execute(InsertionSort, param_dict)
         elif cmd == "selection_sort":
+            return self._algorithm_invoker.execute(SelectionSort, param_dict)
+        elif cmd == "insertion_sort":
+            return self._algorithm_invoker.execute(InsertionSort, param_dict)
+        elif cmd == "bubble_sort":
+            return self._algorithm_invoker.execute(SelectionSort, param_dict)
+        elif cmd == "quick_sort":
+            return self._algorithm_invoker.execute(InsertionSort, param_dict)
+        elif cmd == "gcdt":
             return self._algorithm_invoker.execute(SelectionSort, param_dict)
         else:
             raise ValueError("Could not find algorithm")
