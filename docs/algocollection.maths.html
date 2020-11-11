@@ -1,0 +1,196 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>algocollection.maths package &#8212; algocollection 0.0.3 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="algocollection.search package" href="algocollection.search.html" />
+    <link rel="prev" title="algocollection.common package" href="algocollection.common.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="algocollection.search.html" title="algocollection.search package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="algocollection.common.html" title="algocollection.common package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">algocollection 0.0.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >algocollection</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="algocollection.html" accesskey="U">algocollection package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">algocollection.maths package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="algocollection-maths-package">
+<h1>algocollection.maths package<a class="headerlink" href="#algocollection-maths-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-algocollection.maths.extended_gcd">
+<span id="algocollection-maths-extended-gcd-module"></span><h2>algocollection.maths.extended_gcd module<a class="headerlink" href="#module-algocollection.maths.extended_gcd" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="algocollection.maths.extended_gcd.ExtendedGcd">
+<em class="property">class </em><code class="sig-prename descclassname">algocollection.maths.extended_gcd.</code><code class="sig-name descname">ExtendedGcd</code><a class="headerlink" href="#algocollection.maths.extended_gcd.ExtendedGcd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="algocollection.common.html#algocollection.common.algorithm.Algorithm" title="algocollection.common.algorithm.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">algocollection.common.algorithm.Algorithm</span></code></a></p>
+<p>Find two integers q and r such that a * q + b * r = GCD(a, b)
+and q, r are both co-prime.
+.. method:: execute(self, param_dict: Mapping[str, Any]) -&gt; Any:</p>
+<blockquote>
+<div><p>first, unpacks param_dict into a and b
+Return a triple (g, q, r)
+such that g is the largest integer which divides both a and b
+and g can be written as aq + br = g</p>
+</div></blockquote>
+<p class="rubric">Notes</p>
+<dl class="simple">
+<dt>Time Complexity:</dt><dd><p>Let n = len(array)
+T(n) = O(n)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="algocollection.maths.extended_gcd.ExtendedGcd.execute">
+<code class="sig-name descname">execute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param_dict</span><span class="p">:</span> <span class="n">Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#algocollection.maths.extended_gcd.ExtendedGcd.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="algocollection.maths.extended_gcd.ExtendedGcd.extended_gcd">
+<code class="sig-name descname">extended_gcd</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#algocollection.maths.extended_gcd.ExtendedGcd.extended_gcd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-algocollection.maths.gcd">
+<span id="algocollection-maths-gcd-module"></span><h2>algocollection.maths.gcd module<a class="headerlink" href="#module-algocollection.maths.gcd" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="algocollection.maths.gcd.Gcd">
+<em class="property">class </em><code class="sig-prename descclassname">algocollection.maths.gcd.</code><code class="sig-name descname">Gcd</code><a class="headerlink" href="#algocollection.maths.gcd.Gcd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="algocollection.common.html#algocollection.common.algorithm.Algorithm" title="algocollection.common.algorithm.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">algocollection.common.algorithm.Algorithm</span></code></a></p>
+<p>Find the greatest common divisor between two numbers a and b.
+.. method:: execute(self, param_dict: Mapping[str, Any]) -&gt; Any:</p>
+<blockquote>
+<div><p>first, unpacks param_dict into a and b
+Return the largest integer k which divides both a and b</p>
+</div></blockquote>
+<p class="rubric">Notes</p>
+<dl class="simple">
+<dt>Time Complexity:</dt><dd><p>Let n = len(a) + len(b) (length in base 2)
+T(n) = O(n)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="algocollection.maths.gcd.Gcd.execute">
+<code class="sig-name descname">execute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param_dict</span><span class="p">:</span> <span class="n">Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#algocollection.maths.gcd.Gcd.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-algocollection.maths">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-algocollection.maths" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">algocollection.maths package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-algocollection.maths.extended_gcd">algocollection.maths.extended_gcd module</a></li>
+<li><a class="reference internal" href="#module-algocollection.maths.gcd">algocollection.maths.gcd module</a></li>
+<li><a class="reference internal" href="#module-algocollection.maths">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="algocollection.common.html"
+                        title="previous chapter">algocollection.common package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="algocollection.search.html"
+                        title="next chapter">algocollection.search package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/algocollection.maths.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="algocollection.search.html" title="algocollection.search package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="algocollection.common.html" title="algocollection.common package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">algocollection 0.0.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >algocollection</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="algocollection.html" >algocollection package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">algocollection.maths package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Raymond Mendelovits.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.3.0.
+    </div>
+  </body>
+</html>
