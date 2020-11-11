@@ -8,7 +8,9 @@ Subpackages
    :maxdepth: 4
 
    algocollection.common
+   algocollection.maths
    algocollection.search
+   algocollection.sort
 
 Module contents
 ---------------
