@@ -1,6 +1,3 @@
-algocollection
-=============
-
 .. contents:: **Table of Contents**
     :backlinks: none
 
