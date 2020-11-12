@@ -1,0 +1,196 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>algocollection.graphs package &#8212; algocollection 0.0.4 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="algocollection.maths package" href="algocollection.maths.html" />
+    <link rel="prev" title="algocollection.common package" href="algocollection.common.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="algocollection.maths.html" title="algocollection.maths package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="algocollection.common.html" title="algocollection.common package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">algocollection 0.0.4 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >algocollection</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="algocollection.html" accesskey="U">algocollection package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">algocollection.graphs package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="algocollection-graphs-package">
+<h1>algocollection.graphs package<a class="headerlink" href="#algocollection-graphs-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-algocollection.graphs.breadth_first_search">
+<span id="algocollection-graphs-breadth-first-search-module"></span><h2>algocollection.graphs.breadth_first_search module<a class="headerlink" href="#module-algocollection.graphs.breadth_first_search" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="algocollection.graphs.breadth_first_search.BreadthFirstSearch">
+<em class="property">class </em><code class="sig-prename descclassname">algocollection.graphs.breadth_first_search.</code><code class="sig-name descname">BreadthFirstSearch</code><a class="headerlink" href="#algocollection.graphs.breadth_first_search.BreadthFirstSearch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="algocollection.common.html#algocollection.common.algorithm.Algorithm" title="algocollection.common.algorithm.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">algocollection.common.algorithm.Algorithm</span></code></a></p>
+<p>Traverse all verticies connected to the starting vertex
+Breadth First Search
+——-
+execute(self, param_dict: Mapping[str, Any]) -&gt; Any:</p>
+<blockquote>
+<div><p>first, unpacks param_dict into graph and start (and maybe end)
+If end has not been passed in, returns a set of connected nodes
+Otherwise, return a shortest path between start and end</p>
+</div></blockquote>
+<p class="rubric">Notes</p>
+<dl class="simple">
+<dt>Time Complexity:</dt><dd><p>Let <a href="#id1"><span class="problematic" id="id2">|V|</span></a> be the number of verticies
+Let <a href="#id3"><span class="problematic" id="id4">|E|</span></a> be the number of edges
+T(n) = O(<a href="#id5"><span class="problematic" id="id6">|V|</span></a> + <a href="#id7"><span class="problematic" id="id8">|E|</span></a>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="algocollection.graphs.breadth_first_search.BreadthFirstSearch.execute">
+<code class="sig-name descname">execute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param_dict</span><span class="p">:</span> <span class="n">Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#algocollection.graphs.breadth_first_search.BreadthFirstSearch.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-algocollection.graphs.depth_first_search">
+<span id="algocollection-graphs-depth-first-search-module"></span><h2>algocollection.graphs.depth_first_search module<a class="headerlink" href="#module-algocollection.graphs.depth_first_search" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="algocollection.graphs.depth_first_search.DepthFirstSearch">
+<em class="property">class </em><code class="sig-prename descclassname">algocollection.graphs.depth_first_search.</code><code class="sig-name descname">DepthFirstSearch</code><a class="headerlink" href="#algocollection.graphs.depth_first_search.DepthFirstSearch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="algocollection.common.html#algocollection.common.algorithm.Algorithm" title="algocollection.common.algorithm.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">algocollection.common.algorithm.Algorithm</span></code></a></p>
+<p>Traverse all verticies connected to the starting vertex
+Depth First Search
+——-
+execute(self, param_dict: Mapping[str, Any]) -&gt; Any:</p>
+<blockquote>
+<div><p>first, unpacks param_dict into graph and start (and maybe end)
+If end has not been passed in, returns a set of connected nodes
+Otherwise, return a path from the start to end node</p>
+</div></blockquote>
+<p class="rubric">Notes</p>
+<dl class="simple">
+<dt>Time Complexity:</dt><dd><p>Let <a href="#id9"><span class="problematic" id="id10">|V|</span></a> be the number of verticies
+Let <a href="#id11"><span class="problematic" id="id12">|E|</span></a> be the number of edges
+T(n) = O(<a href="#id13"><span class="problematic" id="id14">|V|</span></a> + <a href="#id15"><span class="problematic" id="id16">|E|</span></a>)</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="algocollection.graphs.depth_first_search.DepthFirstSearch.execute">
+<code class="sig-name descname">execute</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">param_dict</span><span class="p">:</span> <span class="n">Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#algocollection.graphs.depth_first_search.DepthFirstSearch.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-algocollection.graphs">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-algocollection.graphs" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">algocollection.graphs package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-algocollection.graphs.breadth_first_search">algocollection.graphs.breadth_first_search module</a></li>
+<li><a class="reference internal" href="#module-algocollection.graphs.depth_first_search">algocollection.graphs.depth_first_search module</a></li>
+<li><a class="reference internal" href="#module-algocollection.graphs">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="algocollection.common.html"
+                        title="previous chapter">algocollection.common package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="algocollection.maths.html"
+                        title="next chapter">algocollection.maths package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/algocollection.graphs.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="algocollection.maths.html" title="algocollection.maths package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="algocollection.common.html" title="algocollection.common package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">algocollection 0.0.4 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >algocollection</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="algocollection.html" >algocollection package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">algocollection.graphs package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Raymond Mendelovits.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.3.0.
+    </div>
+  </body>
+</html>
