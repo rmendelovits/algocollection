@@ -1,5 +1,5 @@
 from typing import Any, Mapping
-from algocollection.common import Algorithm
+from algocollection.common import Algorithm, DTime
 
 
 class DepthFirstSearch(Algorithm):
@@ -50,3 +50,15 @@ class DepthFirstSearch(Algorithm):
             path.insert(0, start)
             return path
         return visited
+
+    def best_case_time_complexity(self):
+        return DTime.linear
+
+    def average_case_time_complexity(self):
+        return DTime.linear
+
+    def worst_case_time_complexity(self):
+        return DTime.linear
+
+    def worst_case_space_complexity(self):
+        return DTime.linear

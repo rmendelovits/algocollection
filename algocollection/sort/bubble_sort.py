@@ -1,5 +1,5 @@
 from typing import Any, Mapping
-from algocollection.common import Algorithm
+from algocollection.common import Algorithm, DLogTime, DTime
 
 
 class BubbleSort(Algorithm):
@@ -27,3 +27,15 @@ class BubbleSort(Algorithm):
                 if array[j] > array[j+1] :
                     array[j], array[j+1] = array[j+1], array[j]
         return array
+
+    def best_case_time_complexity(self):
+        return DTime.linear
+
+    def average_case_time_complexity(self):
+        return DTime.quadratic
+
+    def worst_case_time_complexity(self):
+        return DTime.quadratic
+
+    def worst_case_space_complexity(self):
+        return DLogTime.constant

@@ -1,5 +1,5 @@
 from typing import Any, Mapping
-from algocollection.common import Algorithm
+from algocollection.common import Algorithm, DLogTime
 
 
 class ExtendedGcd(Algorithm):
@@ -34,3 +34,15 @@ class ExtendedGcd(Algorithm):
         else:
     	    (g, m, n) = self.extended_gcd(b, a % b)
     	    return (g, n, m - (a // b) * n)
+
+    def best_case_time_complexity(self):
+        return DLogTime.constant
+
+    def average_case_time_complexity(self):
+        return DLogTime.logarithmic
+
+    def worst_case_time_complexity(self):
+        return DLogTime.logarithmic
+
+    def worst_case_space_complexity(self):
+        return DLogTime.constant

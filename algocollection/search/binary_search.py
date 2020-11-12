@@ -1,5 +1,5 @@
 from typing import Any, Mapping
-from algocollection.common import Algorithm
+from algocollection.common import Algorithm, DLogTime
 
 
 class BinarySearch(Algorithm):
@@ -40,3 +40,15 @@ class BinarySearch(Algorithm):
             else:
                 right = mid - 1
         return None
+
+    def best_case_time_complexity(self):
+        return DLogTime.constant
+
+    def average_case_time_complexity(self):
+        return DLogTime.logarithmic
+
+    def worst_case_time_complexity(self):
+        return DLogTime.logarithmic
+
+    def worst_case_space_complexity(self):
+        return DLogTime.constant

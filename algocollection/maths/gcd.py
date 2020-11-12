@@ -1,5 +1,5 @@
 from typing import Any, Mapping
-from algocollection.common import Algorithm
+from algocollection.common import Algorithm, DLogTime
 
 
 class Gcd(Algorithm):
@@ -26,3 +26,15 @@ class Gcd(Algorithm):
         while b != 0:
             a, b = b, a % b
         return abs(a)
+
+    def best_case_time_complexity(self):
+        return DLogTime.constant
+
+    def average_case_time_complexity(self):
+        return DLogTime.logarithmic
+
+    def worst_case_time_complexity(self):
+        return DLogTime.logarithmic
+
+    def worst_case_space_complexity(self):
+        return DLogTime.constant

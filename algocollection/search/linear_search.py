@@ -1,5 +1,5 @@
 from typing import Any, Mapping
-from algocollection.common import Algorithm
+from algocollection.common import Algorithm, DLogTime, DTime
 
 
 class LinearSearch(Algorithm):
@@ -31,3 +31,15 @@ class LinearSearch(Algorithm):
             if array[i] == key:
                 return i
         return None
+
+    def best_case_time_complexity(self):
+        return DLogTime.constant
+
+    def average_case_time_complexity(self):
+        return DTime.linear
+
+    def worst_case_time_complexity(self):
+        return DTime.linear
+
+    def worst_case_space_complexity(self):
+        return DLogTime.constant

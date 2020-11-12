@@ -1,5 +1,5 @@
 from typing import Any, Mapping
-from algocollection.common import Algorithm
+from algocollection.common import Algorithm, DLogTime, DTime
 
 
 class MergeSort(Algorithm):
@@ -49,3 +49,15 @@ class MergeSort(Algorithm):
         sorted_array += left_array[left_current_index:]
         sorted_array += right_array[right_current_index:]
         return sorted_array
+
+    def best_case_time_complexity(self):
+        return DTime.linearithmic
+
+    def average_case_time_complexity(self):
+        return DTime.linearithmic
+
+    def worst_case_time_complexity(self):
+        return DTime.linearithmic
+
+    def worst_case_space_complexity(self):
+        return DLogTime.logarithmic
