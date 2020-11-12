@@ -29,7 +29,7 @@ class BreadthFirstSearch(Algorithm):
             end = param_dict['end']
 
         # actual algorthm
-        visited = set()
+        visited = set([start])
         visitor = {}
         queue = [start]
         while queue:
