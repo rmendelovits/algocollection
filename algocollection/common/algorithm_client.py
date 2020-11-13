@@ -3,7 +3,7 @@ from .algorithm_invoker import AlgorithmInvoker
 from algocollection.search import LinearSearch, BinarySearch
 from algocollection.sort import BubbleSort, InsertionSort, MergeSort, QuickSort, SelectionSort
 from algocollection.maths import Gcd, ExtendedGcd
-from algocollection.graphs import BreadthFirstSearch, DepthFirstSearch
+from algocollection.graphs import BreadthFirstSearch, DepthFirstSearch, Dijkstra
 
 
 class AlgorithmClient(object):
@@ -39,5 +39,7 @@ class AlgorithmClient(object):
             return self._algorithm_invoker.execute(BreadthFirstSearch, param_dict)
         elif cmd == "depth_first_search":
             return self._algorithm_invoker.execute(DepthFirstSearch, param_dict)
+        elif cmd == "dijkstra":
+            return self._algorithm_invoker.execute(Dijkstra, param_dict)
         else:
             raise ValueError("Could not find algorithm")

@@ -1,5 +1,5 @@
 from typing import Any, Mapping
-from algocollection.common import Algorithm, DTime
+from algocollection.common import Algorithm, DLogTime, DTime
 
 
 class DepthFirstSearch(Algorithm):
@@ -52,13 +52,13 @@ class DepthFirstSearch(Algorithm):
         return visited
 
     def best_case_time_complexity(self):
-        return DTime.linear
+        return (DTime.linear, DTime.linear)
 
     def average_case_time_complexity(self):
-        return DTime.linear
+        return (DTime.linear, DTime.linear)
 
     def worst_case_time_complexity(self):
-        return DTime.linear
+        return (DTime.linear, DTime.linear)
 
     def worst_case_space_complexity(self):
-        return DTime.linear
+        return (DTime.linear, DLogTime.constant)
