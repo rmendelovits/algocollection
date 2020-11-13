@@ -39,11 +39,3 @@ def test_breadth_first_search_no_end(graph, start, dist):
     (disconnected_graph, 'F', 'D', 12, ['F', 'E', 'D'])])
 def test_breadth_first_search_no_end(graph, start, end, dist, path):
     assert Dijkstra().execute({"graph": graph, "start": start, "end": end}) == (dist, path)
-# @pytest.mark.parametrize("graph, start, end, path", [
-#     (single_node_graph, 'S', 'S', None),
-#     (connected_graph, 'S', 'B', ['S', 'B'},
-#     (connected_graph, 'S', 'T', ['S', 'B', 'T'},
-#     (disconnected_graph, 'S', 'F', None),
-#     (disconnected_graph, 'S', 'B', ['S', 'B'},}
-# def test_breadth_first_search_with_end(graph, start, end, path):
-#     assert BreadthFirstSearch().execute({"graph": graph, "start": start, "end": end}) == path
