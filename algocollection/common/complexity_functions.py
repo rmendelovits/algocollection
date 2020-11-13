@@ -8,3 +8,6 @@ class DTime(Enum):
     linear = 2 # O(n)
     linearithmic = 3 # O(n log n)
     quadratic = 4 # O(n^2)
+
+class GraphTime(Enum):
+    elogv = 1234501
