@@ -26,11 +26,11 @@ class Kruskal(Algorithm):
         graph = param_dict['graph']
 
         # actual algorthm
-        connected_verticies = set()
+        connected_verticies = []
         priority_queue = []
         edge_set = set()
         for vertex in graph:
-            connected_verticies.add(tuple(vertex))
+            connected_verticies.append({vertex})
             for neighbour in graph[vertex]:
                 heapq.heappush(priority_queue, (graph[vertex][neighbour], (vertex, neighbour)))
         while priority_queue:
@@ -38,7 +38,7 @@ class Kruskal(Algorithm):
             min_edge_sets = [tree for tree in connected_verticies if min_edge[0] in tree or min_edge[1] in tree]
             if len(min_edge_sets) == 2:
                 edge_set.add(min_edge)
-                connected_verticies.add(tuple(set(min_edge_sets[0] + min_edge_sets[1])))
+                connected_verticies.append(min_edge_sets[0] | min_edge_sets[1])
                 connected_verticies.remove(min_edge_sets[0])
                 connected_verticies.remove(min_edge_sets[1])
         return edge_set
