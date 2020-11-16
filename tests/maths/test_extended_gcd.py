@@ -1,8 +1,8 @@
 """Unit tests for greatest common divisor."""
 
+import pytest
 from algocollection.maths import ExtendedGcd
 
-import pytest
 
 @pytest.mark.parametrize("a, b, gcd_triple", [
     (1, 1, (1, 0, 1)),

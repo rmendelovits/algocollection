@@ -1,25 +1,25 @@
 """Unit tests for greatest common divisor."""
 
-from algocollection.graphs import DepthFirstSearch
-
 import pytest
+from algocollection.graphs import DepthFirstSearch
 
 single_node_graph = {'S': set()}
 
 connected_graph = {'S': set(['B', 'C', 'F']),
-         'B': set(['S', 'D', 'E', 'T']),
-         'C': set(['S', 'F']),
-         'D': set(['B']),
-         'E': set(['B', 'F']),
-         'F': set(['S', 'C', 'E']),
-         'T': set(['B'])}
+                   'B': set(['S', 'D', 'E', 'T']),
+                   'C': set(['S', 'F']),
+                   'D': set(['B']),
+                   'E': set(['B', 'F']),
+                   'F': set(['S', 'C', 'E']),
+                   'T': set(['B'])}
 
 disconnected_graph = {'S': set(['B', 'C']),
-         'B': set(['S']),
-         'C': set(['S']),
-         'D': set(['E']),
-         'E': set(['D', 'F']),
-         'F': set(['E'])}
+                      'B': set(['S']),
+                      'C': set(['S']),
+                      'D': set(['E']),
+                      'E': set(['D', 'F']),
+                      'F': set(['E'])}
+
 
 @pytest.mark.parametrize("graph, start, connected_verticies", [
     (single_node_graph, 'S', set(['S'])),
@@ -28,13 +28,17 @@ disconnected_graph = {'S': set(['B', 'C']),
     (disconnected_graph, 'S', set(['S', 'B', 'C'])),
     (disconnected_graph, 'F', set(['D', 'E', 'F']))])
 def test_depth_first_search_no_end(graph, start, connected_verticies):
-    assert DepthFirstSearch().execute({"graph": graph, "start": start}) == connected_verticies
+    assert DepthFirstSearch().execute({"graph": graph,
+                                       "start": start}) == connected_verticies
+
 
 @pytest.mark.parametrize("graph, start, end, path", [
     (single_node_graph, 'S', 'S', None),
     (connected_graph, 'S', 'B', ['S', 'B']),
     (connected_graph, 'S', 'T', ['S', 'B', 'T']),
     (disconnected_graph, 'S', 'F', None),
-    (disconnected_graph, 'S', 'B', ['S', 'B']),])
+    (disconnected_graph, 'S', 'B', ['S', 'B'])])
 def test_depth_first_search_with_end(graph, start, end, path):
-    assert DepthFirstSearch().execute({"graph": graph, "start": start, "end": end}) == path
+    assert DepthFirstSearch().execute({"graph": graph,
+                                       "start": start,
+                                       "end": end}) == path

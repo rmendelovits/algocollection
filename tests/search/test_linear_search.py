@@ -1,8 +1,7 @@
 """Unit tests for linear search."""
 
-from algocollection.search import LinearSearch
-
 import pytest
+from algocollection.search import LinearSearch
 
 primes = [2, 3, 5, 7, 11]
 

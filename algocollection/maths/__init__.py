@@ -1,2 +1,2 @@
-from .gcd import Gcd
 from .extended_gcd import ExtendedGcd
+from .gcd import Gcd

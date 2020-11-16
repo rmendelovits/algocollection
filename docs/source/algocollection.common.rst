@@ -12,18 +12,10 @@ algocollection.common.algorithm module
    :undoc-members:
    :show-inheritance:
 
-algocollection.common.algorithm\_client module
-----------------------------------------------
+algocollection.common.complexity\_functions module
+--------------------------------------------------
 
-.. automodule:: algocollection.common.algorithm_client
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-algocollection.common.algorithm\_invoker module
------------------------------------------------
-
-.. automodule:: algocollection.common.algorithm_invoker
+.. automodule:: algocollection.common.complexity_functions
    :members:
    :undoc-members:
    :show-inheritance:

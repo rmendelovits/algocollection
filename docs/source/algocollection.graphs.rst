@@ -20,6 +20,30 @@ algocollection.graphs.depth\_first\_search module
    :undoc-members:
    :show-inheritance:
 
+algocollection.graphs.dijkstra module
+-------------------------------------
+
+.. automodule:: algocollection.graphs.dijkstra
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+algocollection.graphs.kruskal module
+------------------------------------
+
+.. automodule:: algocollection.graphs.kruskal
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+algocollection.graphs.prim module
+---------------------------------
+
+.. automodule:: algocollection.graphs.prim
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
