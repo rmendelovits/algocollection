@@ -50,22 +50,18 @@ class Knapsack(Algorithm):
             raise ValueError("weights and values must be same len")
 
         # actual algorthm
-        packs = []
-        knapsack_value = 0
-        for i in range(len(weights)):
-            packs.append(KnapsackItem(weights[i], values[i]))
-        packs.sort(reverse=True)
-        if len(packs) > 0:
-            current_item = packs[0]
-        while len(packs) > 0 and capacity - current_item.weight >= 0:
-            current_item = packs.pop(0)
-            capacity -= current_item.weight
-            knapsack_value += current_item.value
-        if len(packs) > 0:
-            current_item = packs.pop(0)
-            current_item.reduce_size(capacity / current_item.weight)
-            knapsack_value += current_item.value
-        return knapsack_value
+        optimal_matrix = [[0 for i in range(capacity + 1)]
+                          for j in range(len(weights) + 1)]
+        for i in range(1, len(weights) + 1):
+            for j in range(1, capacity + 1):
+                if weights[i - 1] <= j:
+                    optimal_matrix[i][j] = max(values[i - 1] +
+                                               optimal_matrix[i - 1]
+                                               [j - weights[i - 1]],
+                                               optimal_matrix[i - 1][j])
+                else:
+                    optimal_matrix[i][j] = optimal_matrix[i - 1][j]
+        return optimal_matrix[len(weights)][capacity]
 
     def best_case_time_complexity(self):
         return DTime.linearithmic
