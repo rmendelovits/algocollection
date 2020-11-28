@@ -1,4 +1,4 @@
-""" algocollection - linear search for element in array
+""" algocollection - a fun collection of algorithms
     Copyright (C) 2020 Raymond Mendelovits
 
     This program is free software: you can redistribute it and/or modify
@@ -20,43 +20,88 @@ from algocollection.common import Algorithm, DLogTime, DTime
 
 
 class LinearSearch(Algorithm):
-    """An implimentation of the linear search algorithm.
-    Methods
-    -------
-    execute(self, param_dict: Mapping[str, Any]) -> Any:
-        first, unpacks param_dict into array and key
-        Search the array for a key
-            If the key is found, return the index in the array
-                (from 0 to len(array) - 1)
-            Otherwise return None
-    Notes
-    -----
-    Time Complexity:
-        Let n = len(array)
-        T(n) = O(n)
-    """
     def execute(self, param_dict: Mapping[str, Any]) -> Any:
-        # unpack the param_dict
+        """
+        Finds the key in the given array by looking through the array
+        starting from the first index one by one until it reaches
+        the final element and doesn't find it and returns None, or
+        finds the element and returns it's index in the array.
+
+        Parameters
+        ----------
+        param_dict : dictionary containing all the parameters
+        for the actual function
+        param_dict['array'] : array
+            1-D array of Any type which may or may not contain the key
+        key : Any
+            The value we are looking for in the array
+        Returns
+        -------
+        out : None or int
+            Returns the index of the key in the array, or None if the key
+            is not in the array
+        Examples
+        --------
+        >>> from algocollection.search import LinearSearch
+        >>> primes = [2, 3, 5, 7, 11]
+        >>> LinearSearch().execute({"array": primes, "key": 3})
+        1
+        >>> LinearSearch().execute({"array": primes, "key": 4})
+        None
+        """
         if ('array' not in param_dict or 'key' not in param_dict):
             raise ValueError("LinearSearch requires an array"
                              " and a key to execute")
         array = param_dict['array']
         key = param_dict['key']
 
-        # actual algorthm
+        return self.run(array, key)
+
+    def run(self, array, key):
+        """
+        Finds the key in the given array by looking through the array
+        starting from the first index one by one until it reaches
+        the final element and doesn't find it and returns None, or
+        finds the element and returns it's index in the array.
+
+        Parameters
+        ----------
+        array : array
+            1-D array of Any type which may or may not contain the key
+        key : Any
+            The value we are looking for in the array
+        Returns
+        -------
+        out : None or int
+            Returns the index of the key in the array, or None if the key
+            is not in the array
+        Examples
+        --------
+        >>> from algocollection.search import LinearSearch
+        >>> primes = [2, 3, 5, 7, 11]
+        >>> LinearSearch().run(primes, 3)
+        1
+        >>> LinearSearch().run(primes, 4)
+        None
+        """
         for i in range(len(array)):
             if array[i] == key:
                 return i
         return None
 
     def best_case_time_complexity(self):
+        # Our key could be the first item we search
         return DLogTime.constant
 
     def average_case_time_complexity(self):
+        # Our key could not be in the array, have to search whole array
         return DTime.linear
 
     def worst_case_time_complexity(self):
+        # We expect it to be around halfway, which is just a constant
+        # times linear time
         return DTime.linear
 
     def worst_case_space_complexity(self):
+        # No space dependent variables needed
         return DLogTime.constant
