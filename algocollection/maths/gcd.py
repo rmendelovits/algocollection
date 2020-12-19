@@ -23,7 +23,7 @@ class Gcd(Algorithm):
     """Find the greatest common divisor between two numbers a and b.
     Methods
     -------
-    execute(self, param_dict: Mapping[str, Any]) -> Any:
+    execute(self, param_dict) -> Any:
         first, unpacks param_dict into a and b
         Return the largest integer k which divides both a and b
     Notes
@@ -32,7 +32,7 @@ class Gcd(Algorithm):
         Let n = len(a) + len(b) (length in base 2)
         T(n) = O(n)
     """
-    def execute(self, param_dict: Mapping[str, Any]) -> Any:
+    def execute(self, param_dict) -> Any:
         # unpack the param_dict
         if ('a' not in param_dict or 'b' not in param_dict):
             raise ValueError("Gcd requires two integers a and b")

@@ -21,7 +21,7 @@ from algocollection.common import Algorithm, DLogTime
 
 class BinarySearch(Algorithm):
 
-    def execute(self, param_dict: Mapping[str, Any]) -> Any:
+    def execute(self, param_dict) -> Any:
         """
         Finds the key in the given array by looking through the array
         dividing the search space by half by eliminating items
@@ -35,7 +35,7 @@ class BinarySearch(Algorithm):
         for the actual function
         param_dict['array'] : array
             1-D array of Any type which may or may not contain the key
-        key : Any
+        param_dict['key'] : Any
             The value we are looking for in the array
         Returns
         -------

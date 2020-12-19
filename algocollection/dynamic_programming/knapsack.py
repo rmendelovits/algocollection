@@ -25,7 +25,7 @@ class Knapsack(Algorithm):
     pack the maximal amount of items weighing no more than capacity
     Methods
     -------
-    execute(self, param_dict: Mapping[str, Any]) -> Any:
+    execute(self, param_dict) -> Any:
         first, unpacks param_dict into weights, values, and capacity
         Sort the items in decreasing order of value per cost
         While capacity would not be reached, add all of next item
@@ -36,7 +36,7 @@ class Knapsack(Algorithm):
         Let n = len(weights)
         T(n) = O(n * log_2(n))
     """
-    def execute(self, param_dict: Mapping[str, Any]) -> Any:
+    def execute(self, param_dict) -> Any:
         # unpack the param_dict
         if ('weights' not in param_dict
             or 'values' not in param_dict

@@ -20,7 +20,7 @@ from algocollection.common import Algorithm, DLogTime, DTime
 
 
 class LinearSearch(Algorithm):
-    def execute(self, param_dict: Mapping[str, Any]) -> Any:
+    def execute(self, param_dict) -> Any:
         """
         Finds the key in the given array by looking through the array
         starting from the first index one by one until it reaches
@@ -33,7 +33,7 @@ class LinearSearch(Algorithm):
         for the actual function
         param_dict['array'] : array
             1-D array of Any type which may or may not contain the key
-        key : Any
+        param_dict['key'] : Any
             The value we are looking for in the array
         Returns
         -------

@@ -24,7 +24,7 @@ class ExtendedGcd(Algorithm):
     and q, r are both co-prime.
     Methods
     -------
-    execute(self, param_dict: Mapping[str, Any]) -> Any:
+    execute(self, param_dict) -> Any:
         first, unpacks param_dict into a and b
         Return a triple (g, q, r)
         such that g is the largest integer which divides both a and b
@@ -35,7 +35,7 @@ class ExtendedGcd(Algorithm):
         Let n = len(array)
         T(n) = O(n)
     """
-    def execute(self, param_dict: Mapping[str, Any]) -> Any:
+    def execute(self, param_dict) -> Any:
         # unpack the param_dict
         if ('a' not in param_dict or 'b' not in param_dict):
             raise ValueError("ExtendedGcd requires two integers a and b")

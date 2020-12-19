@@ -23,7 +23,7 @@ class SelectionSort(Algorithm):
     """Sort the array from smallest to largest element
     Methods
     -------
-    execute(self, param_dict: Mapping[str, Any]) -> Any:
+    execute(self, param_dict) -> Any:
         first, unpacks param_dict into array
         Sort the array
     Notes
@@ -32,7 +32,7 @@ class SelectionSort(Algorithm):
         Let n = len(array)
         T(n) = O(n^2)
     """
-    def execute(self, param_dict: Mapping[str, Any]) -> Any:
+    def execute(self, param_dict) -> Any:
         # unpack the param_dict
         if 'array' not in param_dict:
             raise ValueError("SelectionSort requires an array to execute")

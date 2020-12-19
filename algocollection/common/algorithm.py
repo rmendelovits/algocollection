@@ -22,7 +22,7 @@ class Algorithm(ABC):
     """The COMMAND interface"""
 
     @abstractmethod
-    def execute(self, param_dict: Mapping[str, Any]) -> Any:
+    def execute(self, param_dict) -> Any:
         pass
 
     @abstractmethod

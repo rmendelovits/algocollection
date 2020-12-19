@@ -25,7 +25,7 @@ class Dijkstra(Algorithm):
     """Find the shortest distance from start to every vertex (or end)
     Dijkstra
     -------
-    execute(self, param_dict: Mapping[str, Any]) -> Any:
+    execute(self, param_dict) -> Any:
         first, unpacks param_dict into graph and start (and maybe end)
         If end has not been passed in, returns the cost to every vertex
         Otherwise, return the cost and a shortest path between start and end
@@ -38,7 +38,7 @@ class Dijkstra(Algorithm):
         Let |E| be the number of edges
         T(n) = O(|V| log |V| + |E|)
     """
-    def execute(self, param_dict: Mapping[str, Any]) -> Any:
+    def execute(self, param_dict) -> Any:
         # unpack the param_dict
         if ('graph' not in param_dict or 'start' not in param_dict):
             raise ValueError("Dijkstra requires a graph " +

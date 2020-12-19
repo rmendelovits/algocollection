@@ -24,7 +24,7 @@ class Prim(Algorithm):
     """Generate a minimum weight spanning tree from a graph and a start node
     Prim's algorithm
     -------
-    execute(self, param_dict: Mapping[str, Any]) -> Any:
+    execute(self, param_dict) -> Any:
         first, unpacks param_dict into graph and start
         then finds a minimum spanning tree
         from start to all connected vertecies
@@ -37,7 +37,7 @@ class Prim(Algorithm):
         Let |E| be the number of edges
         T(n) = O(|E| log |V|)
     """
-    def execute(self, param_dict: Mapping[str, Any]) -> Any:
+    def execute(self, param_dict) -> Any:
         # unpack the param_dict
         if ('graph' not in param_dict or 'start' not in param_dict):
             raise ValueError("Prim requires" +

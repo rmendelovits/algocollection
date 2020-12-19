@@ -23,7 +23,7 @@ class BreadthFirstSearch(Algorithm):
     """Traverse all verticies connected to the starting vertex
     Breadth First Search
     -------
-    execute(self, param_dict: Mapping[str, Any]) -> Any:
+    execute(self, param_dict) -> Any:
         first, unpacks param_dict into graph and start (and maybe end)
         If end has not been passed in, returns a set of connected nodes
         Otherwise, return a shortest path between start and end
@@ -36,7 +36,7 @@ class BreadthFirstSearch(Algorithm):
         Let |E| be the number of edges
         T(n) = O(|V| + |E|)
     """
-    def execute(self, param_dict: Mapping[str, Any]) -> Any:
+    def execute(self, param_dict) -> Any:
         # unpack the param_dict
         if ('graph' not in param_dict or 'start' not in param_dict):
             raise ValueError("BreadthFirstSearch requires" +

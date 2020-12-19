@@ -25,7 +25,7 @@ class JobScheduling(Algorithm):
     return the maximum number of non conflicting jobs
     Methods
     -------
-    execute(self, param_dict: Mapping[str, Any]) -> Any:
+    execute(self, param_dict) -> Any:
         first, unpacks param_dict into starts, ends
         Sort the items in increasing order of end time
         For each job, add it if it doesn't conflict
@@ -35,7 +35,7 @@ class JobScheduling(Algorithm):
         Let n = len(weights)
         T(n) = O(n * log_2(n))
     """
-    def execute(self, param_dict: Mapping[str, Any]) -> Any:
+    def execute(self, param_dict) -> Any:
         # unpack the param_dict
         if ('starts' not in param_dict
                 or 'ends' not in param_dict):
